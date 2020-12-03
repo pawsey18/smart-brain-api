@@ -1,7 +1,10 @@
 {
   "name": "node",
   "version": "1.0.0",
-  "engines": { "node": "v10.16.3", "npm": "6.9.0" },
+  "engines": {
+    "node": "v10.16.3",
+    "npm": "6.9.0"
+  },
   "main": "script.js",
   "scripts": {
     "start": "nodemon server.js"
@@ -18,7 +21,7 @@
     "event-stream": "^4.0.1",
     "express": "^4.17.1",
     "knex": "^0.21.12",
-    "nodemode": "^1.0.3",
+    "nodemode-cli": "^1.0.3",
     "pg": "^8.5.1"
   },
   "devDependencies": {
