@@ -6,6 +6,11 @@
     "start": "nodemon server.js"
   },
   "keywords": [],
+  
+"engines": {
+  "node": "^14.15.1"
+},
+
   "author": "",
   "license": "ISC",
   "dependencies": {
