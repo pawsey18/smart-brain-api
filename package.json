@@ -22,9 +22,6 @@
     "event-stream": "^4.0.1",
     "express": "^4.17.1",
     "knex": "^0.21.12",
-    "nodemode-cli": "^1.0.3",
-    "nodemodeproject": "^1.0.3",
-    "nodemode" : "1.0.3",
     "pg": "^8.5.1"
   },
   "repository": {
