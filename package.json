@@ -27,9 +27,6 @@
     "nodemode" : "1.0.3",
     "pg": "^8.5.1"
   },
-  "devDependencies": {
-    "nodemode": "1.0.3"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/pawsey18/smart-brain-api.git"
