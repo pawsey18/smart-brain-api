@@ -52,8 +52,8 @@ bcrypt.compare('pussy', hash, function(err,res) {
 // res = false
 }); */
 
-app.listen(3000, () => { 
-    console.log("i guess it worked after all")
+app.listen(process.env.PORT || 3000, () => { 
+    console.log(`APP IS RUNNING ON PORT ${process.env.PORT}`);
 } )
 
 /*
