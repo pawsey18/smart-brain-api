@@ -21,11 +21,10 @@ const db = knex({
   ssl: {
     rejectUnauthorized: false
   },
-        host : 'postgresql-metric-42007',
-        user : 'postgres',
-        password : '22323',
-        port : '5432',
-        database : 'smart-brain'
+        host : 'process.env.DATABASE_URL',
+        ssl: true,
+
+   
     }
 });
 
