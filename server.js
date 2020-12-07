@@ -21,7 +21,7 @@ const db = knex({
   ssl: {
     rejectUnauthorized: false
   },
-        host : '127.0.0.1',
+        host : 'postgresql-metric-42007',
         user : 'postgres',
         password : '22323',
         port : '5432',
