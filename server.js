@@ -18,16 +18,9 @@ const db = knex({
     client: 'postgres',
     connection: { 
         connectionString: process.env.DATABASE_URL,
-  ssl: {
-    rejectUnauthorized: false
-  },
-        host : 'process.env.DATABASE_URL',
         ssl: true,
-
-   
     }
 });
-
 
 app.get('/', (req, res) => { 
    res.send("success");
