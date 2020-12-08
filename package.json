@@ -2,9 +2,7 @@
   "name": "node",
   "version": "1.0.0",
   "main": "script.js",
-  "scripts": {
-    "start": "nodemon server.js"
-  },
+ 
   "keywords": [],
   "engines": {
     "node": "14.15.1",
