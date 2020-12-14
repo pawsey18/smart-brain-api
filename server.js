@@ -23,16 +23,17 @@ const db = knex({
 
 const app = express();
 
+app.use(cors())
 app.use(bodyParser.json())
-app.use(cors());
 
 
-app.get('/', (req, res) => { res.json("success");})
-app.post('/signin', (req, res) => {signin.handleSignin(req, res, db, bcrypt)} )
-app.post('/register', (req, res) => {register.handleRegister(req, res,db,bcrypt)})
-app.get('/profile/:id', (req, res) => {profile.handleProfileGet(req, res, db)} )
-app.put('/image', (req, res) => {image.handleImage(req, res, db)})
-app.post('/imageurl', (req, res) => {image.handleApiCall(req, res)})
+
+app.get('/', (req, res)=> { res.send(db.users) })
+app.post('/signin', signin.handleSignin(db, bcrypt))
+app.post('/register', (req, res) => { register.handleRegister(req, res, db, bcrypt) })
+app.get('/profile/:id', (req, res) => { profile.handleProfileGet(req, res, db)})
+app.put('/image', (req, res) => { image.handleImage(req, res, db)})
+app.post('/imageurl', (req, res) => { image.handleApiCall(req, res)})
 
 /* // storing hash in your password db
 bcrypt.hash('bacon', null, null, function(err,hash) { 
@@ -48,10 +49,9 @@ bcrypt.compare('pussy', hash, function(err,res) {
 // res = false
 }); */
 
-app.listen(process.env.PORT || 3000, () => { 
-    console.log(`APP IS RUNNING ON PORT ${process.env.PORT}`);
-} )
-
+app.listen(3000, ()=> {
+    console.log('app is running on port 3000');
+  })
 /*
 / --> res = this is working
 /signin --> POST = success/fail
