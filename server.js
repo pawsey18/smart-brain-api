@@ -26,9 +26,8 @@ const app = express();
 app.use(bodyParser.json())
 app.use(cors());
 
-app.set('port', (process.env.PORT || 3000));
 
-app.get('/', (req, res) => { res.send("success");})
+app.get('/', (req, res) => { res.json("success");})
 app.post('/signin', (req, res) => {signin.handleSignin(req, res, db, bcrypt)} )
 app.post('/register', (req, res) => {register.handleRegister(req, res,db,bcrypt)})
 app.get('/profile/:id', (req, res) => {profile.handleProfileGet(req, res, db)} )
