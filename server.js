@@ -22,9 +22,11 @@ const db = knex({
 
 
 const app = express();
-
+const PORT = process.env.PORT || '800';
 app.use(cors())
 app.use(bodyParser.json())
+// setting port
+app.set("port", PORT);
 
 
 
@@ -50,7 +52,7 @@ bcrypt.compare('pussy', hash, function(err,res) {
 }); */
 
 app.listen(process.env.PORT || 3000, function(){
-    console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+    console.log("success");
   });
 /*
 / --> res = this is working
